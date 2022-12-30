@@ -212,7 +212,19 @@ under the License.
 
 
 
-
+        <security-setting match="oms">
+            <permission type="createNonDurableQueue" roles="oms"/>
+            <permission type="deleteNonDurableQueue" roles="oms"/>
+            <permission type="createDurableQueue" roles="oms"/>
+            <permission type="deleteDurableQueue" roles="oms"/>
+            <permission type="createAddress" roles="oms"/>
+            <permission type="deleteAddress" roles="oms"/>
+            <permission type="consume" roles="oms"/>
+            <permission type="browse" roles="oms"/>
+            <permission type="send" roles="oms"/>
+            <!-- we need this otherwise ./artemis data imp wouldn't work -->
+            <permission type="manage" roles="oms"/>
+       </security-setting>
 
 
 
