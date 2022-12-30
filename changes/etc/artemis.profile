@@ -35,7 +35,7 @@ ARTEMIS_INSTANCE_ETC_URI='file:/var/lib/artemis-instance/./etc/'
 # be separated by a comma. Set to '*' or an empty value to disable role checking when Hawtio authenticates a user.
 #HAWTIO_ROLE='amq'
 #HAWTIO_ROLE='*'
-HAWTIO_ROLE='ems,amq'
+HAWTIO_ROLE='ems,amq,oms'
 # Java Opts
 if [ -z "$JAVA_ARGS" ]; then
     JAVA_ARGS="-XX:AutoBoxCacheMax=20000 -XX:+PrintClassHistogram -XX:+UseG1GC -XX:+UseStringDeduplication -Xms512M -Xmx2G -Dhawtio.disableProxy=true -Dhawtio.realm=activemq -Dhawtio.offline=true -Dhawtio.rolePrincipalClasses=org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal -Djolokia.policyLocation=${ARTEMIS_INSTANCE_ETC_URI}jolokia-access.xml "
